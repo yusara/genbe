@@ -1,20 +1,22 @@
 package com.afdhal.genbe.model.dto;
 
 public class MessageDto {
-	private String status;
-	private String messages;
-	
-	public String getStatus() {
+	private Boolean status;
+	private String message;
+
+	public Boolean getStatus() {
 		return status;
 	}
-	public void setStatus(String status) {
+
+	public void setStatus(Boolean status) {
 		this.status = status;
 	}
-	public String getMessages() {
-		return messages;
+
+	public String getMessage() {
+		return message;
 	}
-	public void setMessages(String messages) {
-		this.messages = messages;
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
-	
 }
