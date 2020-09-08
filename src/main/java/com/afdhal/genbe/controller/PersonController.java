@@ -39,6 +39,14 @@ public class PersonController {
 	@Autowired
 	private PersonService personService;
 
+//	@GetMapping
+//    public List<Object> getAll(){
+//	    List<Object> data = new ArrayList<>();
+//
+//
+//	    return data;
+//    }
+
 	@GetMapping("/{nik}")
 	public List<Object> getByNik(@PathVariable String nik) {
 		List<Object> values = new ArrayList<>();
@@ -91,6 +99,13 @@ public class PersonController {
 		Boolean status = false;
 		String message = "data gagal masuk, jumlah digit nik tidak sama dengan 16";
 		return messages(message,status);
+	}
+
+	@PostMapping("/pendidikan")
+	public MessageDto insertPendidikan(){
+		MessageDto message = new MessageDto();
+
+		return message;
 	}
 
 	private Person convertToEntityPerson(PersonDto dtoPerson) { 
